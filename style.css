@@ -85,8 +85,7 @@ header p{
 }
 .company_logos{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
 }
 /*  Product section start */
@@ -152,3 +151,89 @@ footer{
 .container{
     margin: 40px 200px;
 }
+
+/* Tablat device */
+@media only  screen and (min-width:410px) and (max-width:960px) {
+    body{
+        width: 100%;
+    }
+    nav{
+        display: none;
+    }
+    .area{
+        flex-direction: column;
+    }
+    .header h1{
+        font-size:20px;
+    }
+    .header{
+        /* width: 200px;
+        height: 200px; */
+    }
+    .header img {
+        width: 100%;
+        height: 100%;
+    }
+    .company_logos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-items: center;
+    }
+    .company{
+        padding: 3%;
+        font-size: 50px;
+    }
+    h3{
+        font-size: 50px;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+
+}
+    /* Mobile-device */
+    @media only screen and (max-width: 410px){
+        .nav{
+            display: grid;
+        }
+        .area{
+            flex-direction: column;
+        }
+        h1{
+            font-size: 0px;
+        }
+        .header{
+            background-image: none;
+        }
+        .products{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .product{
+            width: 100%;
+        }
+        .company_logos{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            align-items: center;
+        }
+        h1{
+            font-size: 52px;
+            line-height: 70px;
+            width: 582px;
+            height: 133px;
+            left: 120px;
+            top: 285px;
+        }
+        .container{
+            margin: 0;
+        }
+        .navbar{
+            display: none;
+        }
+    }
+        
+   
+    
